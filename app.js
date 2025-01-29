@@ -23,15 +23,38 @@ $(document).ready(function(){
         return -1;
     };
 
+    function createWeeksGrid() {
+        const weeksGrid = $("#weeks-grid");
+        const totalWeeks = 52 * 80; // 80 years * 52 weeks
+
+        for (let i = 0; i < totalWeeks; i++) {
+            weeksGrid.append($('<div>').addClass('week future'));
+        }
+    }
+
+    function updateWeeksGrid(dob) {
+        const now = new Date();
+        const weeksLived = Math.floor((now - dob) / (1000 * 60 * 60 * 24 * 7));
+        
+        $('#weeks-grid .week').each(function(index) {
+            if (index < weeksLived) {
+                $(this).removeClass('future').addClass('past');
+            }
+        });
+    }
+
     function renderAgeLoop()
     {
         var dob = load();
         $("#choose").css("display", "none");
         $("#timer").css("display", "block");
+        
+        createWeeksGrid();
 
         setInterval(function(){
             var age = getAge(dob);
             $("#age").html(age.year + "<sup>." + age.ms + "</sup>");
+            updateWeeksGrid(dob);
         }, 100);
     };
 

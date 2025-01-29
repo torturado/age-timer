@@ -108,3 +108,49 @@ footer {
   -webkit-flex-direction: row;
   -webkit-justify-content: center;
 }
+
+.weeks-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#weeks-grid {
+    display: grid;
+    grid-template-columns: repeat(52, 6px);
+    grid-template-rows: repeat(80, 6px);
+    gap: 2px;
+    margin: 1rem auto;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+.week {
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+}
+
+.week.past {
+    background-color: #0BE;
+}
+
+.week.future {
+    background-color: #e0e0e0;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #B0B5B9;
+}
+
+.legend .past {
+    color: #0BE;
+}
+
+.legend .future {
+    color: #e0e0e0;
+}

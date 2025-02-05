@@ -13,6 +13,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #0F0F0F;
 }
 
 body {
@@ -29,46 +30,50 @@ body, input {
 }
 
 .age-label {
-  color: #B0B5B9;
-  font-size: 1.2rem;
-  line-height: 1;
+  color: #00FFA3;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0 0 0 2px;
 }
 
 #cite {
-  color: #B0B5B9;
-  font-size: 1.2rem;
-  line-height: 1;
-  margin: 0 0 0 2px;
+  color: #666;
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 #cite a {
-  color: rgb(154, 157, 160);
+  color: #00FFA3;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 #cite a:visited {
   color: rgb(125, 128, 131);
 }
 #cite a:hover {
-  color: rgb(202, 207, 209);
+  color: #FFFFFF;
 }
 #cite a:active {
   color: rgb(125, 128, 131);
 } 
 
 .count {
-  color: #494949;
+  color: #FFFFFF;
   margin: 0;
-  font-size: 6rem;
+  font-size: 7rem;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 255, 163, 0.3);
 }
 
 .count sup {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   margin-left: 7px;
+  color: #00FFA3;
 }
 
 label {
@@ -89,17 +94,35 @@ input {
   border-style: solid;
   border-radius: 0.25rem;
   border-color: #CCC;
-  background-color: #FFF;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #00FFA3;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 163, 0.2);
 }
 
 button {
   outline: none;
   display: block;
   cursor: pointer;
-  color: #FFF;
+  color: #0F0F0F;
   border: none;
   border-radius: 0.25rem;
-  background-color: #0BE;
+  background-color: #00FFA3;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 2rem;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 163, 0.4);
 }
 
 footer {
@@ -119,10 +142,13 @@ footer {
     grid-template-columns: repeat(52, 6px);
     grid-template-rows: repeat(80, 6px);
     gap: 2px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     max-width: 100%;
     overflow-x: auto;
-    padding: 1rem;
+    padding: 1.5rem;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .week {
@@ -132,25 +158,35 @@ footer {
 }
 
 .week.past {
-    background-color: #0BE;
+    background-color: #00FFA3;
+    box-shadow: 0 0 5px rgba(0, 255, 163, 0.5);
 }
 
 .week.future {
-    background-color: #e0e0e0;
+    background-color: #333333;
 }
 
 .legend {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    font-size: 0.8rem;
-    color: #B0B5B9;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 1rem;
 }
 
 .legend .past {
-    color: #0BE;
+    color: #00FFA3;
 }
 
 .legend .future {
-    color: #e0e0e0;
+    color: #666;
+}
+
+.motivation-quote {
+    color: #888;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
 }

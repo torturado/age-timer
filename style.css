@@ -46,6 +46,12 @@ body, input {
   text-align: center;
 }
 
+#cite h6 {
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin: 0;
+}
+
 #cite a,
 #cite a:link,
 #cite a:visited,

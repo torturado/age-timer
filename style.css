@@ -46,20 +46,23 @@ body, input {
   text-align: center;
 }
 
-#cite a {
-  color: #00FFA3;
+#cite h6 {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+#cite a,
+#cite a:link,
+#cite a:visited,
+#cite a:active {
+  color: #00FFA3 !important;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-#cite a:visited {
-  color: #00FFA3;
-}
+
 #cite a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
-#cite a:active {
-  color: #00FFA3;
-} 
 
 .count {
   color: #FFFFFF;

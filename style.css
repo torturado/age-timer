@@ -52,13 +52,13 @@ body, input {
   transition: color 0.3s ease;
 }
 #cite a:visited {
-  color: rgb(125, 128, 131);
+  color: #00FFA3;
 }
 #cite a:hover {
   color: #FFFFFF;
 }
 #cite a:active {
-  color: rgb(125, 128, 131);
+  color: #00FFA3;
 } 
 
 .count {
